@@ -1,0 +1,19 @@
+# Python virtual environments (LARGE!)
+new_test/
+venv/
+env/
+*.pyc
+__pycache__/
+
+# Model weights (LARGE!)
+*.safetensors
+*.bin
+runs/
+runs_5epoch_backup/
+
+# Old results
+results_10runs_backup/
+results_30runs/
+
+# Logs
+*.log
