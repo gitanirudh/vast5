@@ -1,19 +1,32 @@
-# Python virtual environments (LARGE!)
+# Python virtual environments
 new_test/
 venv/
 env/
 *.pyc
 __pycache__/
 
-# Model weights (LARGE!)
+# Model weights (LARGE - exclude)
 *.safetensors
 *.bin
-runs/
+runs/*/checkpoint-*/
+runs/*/final/
 runs_5epoch_backup/
 
-# Old results
+# Old results - exclude CSVs but keep plots
 results_10runs_backup/
-results_30runs/
+results_30runs/*.csv
+results_30runs/reports/
+
+# Keep plots and logs
+!results_30runs/*.png
+!results_5epoch_test/*.png
+
+# Keep training logs
+!runs/*/training_log.csv
+!runs/*/epoch_log.csv
+!runs/*/best/config.json
+!runs/*/best/*.json
+!runs/*/best/tokenizer*
 
 # Logs
 *.log
